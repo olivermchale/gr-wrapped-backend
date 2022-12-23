@@ -6,8 +6,8 @@ import { load } from 'cheerio';
 export class AppService {
   baseUrl = 'https://www.goodreads.com/review/list/';
   params = '?per_page=30&shelf=read&view=table';
-  //surely no one reads more than 150 books a year? lol
-  pages = [1, 2, 3, 4, 5];
+  //surely no one reads more than 210 books a year
+  pages = [1, 2, 3, 4, 5, 6, 7];
   constructor(private scraperService: ScraperService) {}
   async scrapeGoodreadsProfile(url: string): Promise<string[]> {
     const profileIdStartIndex = url.indexOf('show/');

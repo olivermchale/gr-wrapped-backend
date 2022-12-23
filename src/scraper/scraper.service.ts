@@ -5,6 +5,7 @@ import axios, { AxiosInstance } from 'axios';
 export class ScraperService {
   httpClient: AxiosInstance = axios.create();
   async getBookData(profileUrl: string) {
+    console.log('scraping profile: ', profileUrl);
     const response = await this.httpClient.get(profileUrl);
     if (response.status !== 200) {
       throw new Error(
